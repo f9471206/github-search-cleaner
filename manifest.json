@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Search History Cleaner",
+  "version": "1.0.0",
+  "description": "Adds clear buttons to the Recent section of the GitHub search box to delete recent searches all at once or one by one.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
